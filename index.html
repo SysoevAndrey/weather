@@ -4,49 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="pages/index.css">
-    <title>Weather</title>
+    <title>Current Weather</title>
 </head>
 
 <body>
-    <header class="header">
-        <form class="header__form">
-            <input type="text" class="input" placeholder="City">
-        </form>
-        <ul class="header__social">
-            <li class="header__logo">
-                <a href="#" class="header__link">
-                    <img src="images/instagram.svg" alt="Логотип Инстаграм" class="header__social-icon">
-                  </a>
-            </li>
-            <li class="header__logo">
-                <a href="#" class="header__link">
-                    <img src="images/twitter.svg" alt="Логотип Твиттера" class="header__social-icon">
-                  </a>
-            </li>
-            <li class="header__logo">
-                <a href="#" class="header__link">
-                    <img src="images/github.svg" alt="Логотип Гитхаб" class="header__social-icon">
-                </a></li>
-        </ul>
-    </header>
-    <main class="main">
-        <div class="main__data">
-            <div class="additional-info">
-                <div class="additional-info__feels-like"></div>
-                <div class="additional-info__wind"></div>
-                <div class="additional-info__humidity"></div>
+    <section class="page">
+        <header class="header">
+            <form class="header__form">
+                <input type="text" class="input" placeholder="City">
+            </form>
+            <ul class="header__social">
+                <li class="header__logo">
+                    <a href="#" class="header__link">
+                        <img src="images/instagram.svg" alt="Instagram logo" class="header__social-icon">
+                    </a>
+                </li>
+                <li class="header__logo">
+                    <a href="#" class="header__link">
+                        <img src="images/twitter.svg" alt="Twitter logo" class="header__social-icon">
+                    </a>
+                </li>
+                <li class="header__logo">
+                    <a href="#" class="header__link">
+                        <img src="images/github.svg" alt="Github logo" class="header__social-icon">
+                    </a></li>
+            </ul>
+        </header>
+        <main class="main">
+            <div class="main__data">
+                <div class="additional-info">
+                    <div class="info-item">
+                        <img src="./images/temperature.svg" alt="Termometer icon" class="info-item__logo">
+                        <p class="info-item__value"></p>
+                        <p class="info-item__description">Feels Like</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="./images/wind.svg" alt="Wind icon" class="info-item__logo">
+                        <p class="info-item__value"></p>
+                        <p class="info-item__description">Wind</p>
+                    </div>
+                    <div class="info-item">
+                        <img src="./images/humidity.svg" alt="Drop icon" class="info-item__logo">
+                        <p class="info-item__value"></p>
+                        <p class="info-item__description">Humidity</p>
+                    </div>
+                </div>
+                <div class="temperature-info">
+                    <div class="main-info__temperature"></div>
+                    <div class="main-info__description"></div>
+                </div>
             </div>
-            <div class="main-info">
-                <div class="main-info__temprature"></div>
-                <div class="main-info__description"></div>
+            <div class="main__place">
+                <h1 class="main__title">City</h1>
             </div>
-        </div>
-        <div class="main__info">
-            <h1 class="main__title"></h1>
-        </div>
-    </main>
+        </main>
+    </section>
 </body>
 
 </html>

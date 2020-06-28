@@ -1,0 +1,24 @@
+@import url(./__data/main__data.css);
+@import url(./__place/main__place.css);
+@import url(./__title/main__title.css);
+
+.main {
+    position: relative;
+    display: flex;
+    height: calc(100vh - 50px);
+    background-image: url(../../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.main::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: #1c233a;
+    opacity: 0.4;
+}

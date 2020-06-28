@@ -1,2 +1,7 @@
+@import url(../blocks/page/page.css);
 @import url(../blocks/header/header.css);
 @import url(../blocks/input/input.css);
+@import url(../blocks/main/main.css);
+@import url(../blocks/additional-info/additional-info.css);
+@import url(../blocks/temperature-info/temperature-info.css);
+@import url(../blocks/info-item/info-item.css);

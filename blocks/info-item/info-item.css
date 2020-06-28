@@ -1,0 +1,13 @@
+@import url(./__logo/info-item__logo.css);
+@import url(./__value/info-item__value.css);
+@import url(./__description/info-item__description.css);
+
+.info-item {
+    box-sizing: border-box;
+    width: 100%;
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
