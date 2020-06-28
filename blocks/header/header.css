@@ -1,8 +1,13 @@
+@import url(./__social/header__social.css);
+@import url(./__link/header__link.css);
+@import url(./__logo/header__logo.css);
+@import url(./__social-icon/header__social-icon.css);
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #243D69;
-    padding: 0 30px;
+    padding: 0 70px;
     height: 50px;
 }

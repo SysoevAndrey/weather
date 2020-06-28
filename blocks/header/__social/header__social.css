@@ -1,0 +1,9 @@
+.header__social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-left: -7px;
+    padding-right: -7px;
+}
