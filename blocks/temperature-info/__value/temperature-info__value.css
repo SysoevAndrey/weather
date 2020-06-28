@@ -1,0 +1,8 @@
+.temperature-info__value {
+    box-sizing: border-box;
+    padding-left: 50px;
+    padding-top: 20px;
+    width: 60%;
+    background-color: #61889f;
+    opacity: 0.7;
+}
