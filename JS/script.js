@@ -12,6 +12,24 @@
 
     const form = document.forms.weather;
     let mainTitle = document.querySelector('.main__title');
+    let feelsLike = document.querySelector('#feelsLike');
+    let windSpeed = document.querySelector('#windSpeed');
+    let humidity = document.querySelector('#humidity');
+    let mainTemp = document.querySelector('.temperature-info__temp');
+    let tempDescription = document.querySelector('.temperature-info__desc');
+    let weatherImage = document.querySelector('.temperature-info__logo');
+
+    function setAdditionalInfo(mainInfo, wind) {
+        feelsLike.textContent = Math.round(mainInfo.feels_like - 273) + ' °C';
+        windSpeed.textContent = wind.speed + ' m/s';
+        humidity.textContent = mainInfo.humidity + ' %';
+    }
+
+    function setMainInfo(degrees, description) {
+        mainTemp.textContent = Math.round(degrees.temp - 273) + ' °C';
+        tempDescription.textContent = description[0].main;
+        weatherImage.src = `url(./images/${conditions[description[0].main]})`;
+    }
 
     function setCityName(name) {
         mainTitle.textContent = name;
@@ -27,9 +45,8 @@
                 }
             })
             .then(res => {
-                console.log(res);
-                // setAdditionalInfo(res);
-                // setMainInfo(res);
+                setAdditionalInfo(res.main, res.wind);
+                setMainInfo(res.main, res.weather);
                 setCityName(res.name);
             })
             .catch(err => {
