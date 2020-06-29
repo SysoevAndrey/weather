@@ -5,7 +5,7 @@
     }
 
     const request = {
-        baseUrl: 'http://api.openweathermap.org/data/2.5/weather',
+        baseUrl: 'https://api.openweathermap.org/data/2.5/weather',
         APPID: '46c656b00d844706a4dbded16e2ea006',
         'Content-Type': 'application/json'
     }
