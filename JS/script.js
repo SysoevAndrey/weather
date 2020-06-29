@@ -1,7 +1,8 @@
 (function () {
     const conditions = {
-        Clear: 'sun.svg',
-        Rain: 'rain.svg'
+        Clear: 'temperature-info__logo_clear',
+        Rain: 'temperature-info__logo_rain',
+        Clouds: 'temperature-info__logo_cloudy'
     }
 
     const request = {
@@ -61,12 +62,24 @@
     function setMainInfo(degrees, description) {
         mainTemp.textContent = Math.round(degrees.temp - 273) + ' °C';
         tempDescription.textContent = description[0].main;
+        weatherImage.classList.remove(weatherImage.classList.item(1));
+        weatherImage.classList.add(`${conditions[description[0].main]}`);
         getCurrentDate();
         setInterval(getCurrentDate, 500);
     }
 
     function setCityName(name) {
         mainTitle.textContent = name;
+    }
+
+    function resetData() {
+        mainTitle.textContent = 'The city is not found';
+        feelsLike.textContent = '-';
+        windSpeed.textContent = '-';
+        humidity.textContent = '-';
+        mainTemp.textContent = '-';
+        tempDescription.textContent = '';
+        weatherImage.classList.remove(weatherImage.classList.item(1));
     }
 
     function getData(city) {
@@ -84,7 +97,7 @@
                 setCityName(res.name);
             })
             .catch(err => {
-                console.log(err);
+                resetData();
             });
     }
 
@@ -95,6 +108,9 @@
         const cityName = input.value;
 
         getData(cityName);
+
+        input.blur();
+        input.value = '';
     }
 
     form.addEventListener('submit', sendForm);

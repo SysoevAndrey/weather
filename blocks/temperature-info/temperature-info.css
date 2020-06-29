@@ -4,6 +4,10 @@
 @import url(./__date/temperature-info__date.css);
 @import url(./__image/temperature-info__image.css);
 @import url(./__desc/temperature-info__desc.css);
+@import url(./__logo/temperature-info__logo.css);
+@import url(./__logo/_clear/temperature-info__logo_clear.css);
+@import url(./__logo/_rain/temperature-info__logo_rain.css);
+@import url(./__logo/_cloudy/temperature-info__logo_cloudy.css);
 
 .temperature-info {
     width: 100%;
