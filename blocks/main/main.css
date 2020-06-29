@@ -22,3 +22,9 @@
     background-color: #1c233a;
     opacity: 0.4;
 }
+
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+}

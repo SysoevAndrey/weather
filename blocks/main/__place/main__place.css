@@ -1,8 +1,18 @@
 .main__place {
-    margin-top: 200px;
+    padding-top: 200px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     width: 50%;
     z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .main__place {
+        position: relative;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        order: -1;
+    }
 }

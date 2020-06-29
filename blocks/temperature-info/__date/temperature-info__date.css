@@ -2,3 +2,9 @@
     margin: 0;
     font-size: 22px;
 }
+
+@media screen and (max-width: 768px) {
+    .temperature-info__date {
+        font-size: 15px;
+    }
+}
