@@ -10,6 +10,31 @@
         'Content-Type': 'application/json'
     }
 
+    const days = {
+        1: 'MON',
+        2: 'TUE',
+        3: 'WED',
+        4: 'THU',
+        5: 'FRI',
+        6: 'SAT',
+        7: 'SUN',
+    }
+
+    const months = {
+        1: 'January',
+        2: 'Febraury',
+        3: 'March',
+        4: 'April',
+        5: 'May',
+        6: 'June',
+        7: 'July',
+        8: 'August',
+        9: 'September',
+        10: 'October',
+        11: 'November',
+        12: 'December',
+    }
+
     const form = document.forms.weather;
     let mainTitle = document.querySelector('.main__title');
     let feelsLike = document.querySelector('#feelsLike');
@@ -18,6 +43,8 @@
     let mainTemp = document.querySelector('.temperature-info__temp');
     let tempDescription = document.querySelector('.temperature-info__desc');
     let weatherImage = document.querySelector('.temperature-info__logo');
+    let currentTime = document.querySelector('.temperature-info__time');
+    let currentDate = document.querySelector('.temperature-info__date');
 
     function setAdditionalInfo(mainInfo, wind) {
         feelsLike.textContent = Math.round(mainInfo.feels_like - 273) + ' °C';
@@ -25,10 +52,17 @@
         humidity.textContent = mainInfo.humidity + ' %';
     }
 
+    function getCurrentDate() {
+        const date = new Date();
+        currentTime.textContent = date.getHours() + ' : ' + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
+        currentDate.textContent = days[date.getDay()] + ' ' + date.getDate() + ' ' + months[date.getMonth()] + ' ' + date.getFullYear();
+    }
+
     function setMainInfo(degrees, description) {
         mainTemp.textContent = Math.round(degrees.temp - 273) + ' °C';
         tempDescription.textContent = description[0].main;
-        weatherImage.src = `url(./images/${conditions[description[0].main]})`;
+        getCurrentDate();
+        setInterval(getCurrentDate, 500);
     }
 
     function setCityName(name) {
