@@ -69,7 +69,16 @@
     }
 
     function setCityName(name) {
-        mainTitle.textContent = name;
+        if (document.documentElement.clientWidth <= 768) {
+            if (name.length > 11) {
+                mainTitle.style.fontSize = '20px';
+            } else if (name.length > 7) {
+                mainTitle.style.fontSize = '30px';
+            } else {
+                mainTitle.style.fontSize = '40px';
+            }
+            mainTitle.textContent = name;
+        }
     }
 
     function resetData() {
