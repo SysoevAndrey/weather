@@ -5,3 +5,10 @@
     letter-spacing: 10px;
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    .main__title {
+        width: 80%;
+        font-size: 40px;
+    }
+}
