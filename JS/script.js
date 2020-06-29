@@ -73,7 +73,7 @@
     }
 
     function resetData() {
-        mainTitle.textContent = 'The city is not found';
+        mainTitle.textContent = 'No Data';
         feelsLike.textContent = '-';
         windSpeed.textContent = '-';
         humidity.textContent = '-';
