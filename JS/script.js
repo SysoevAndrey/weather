@@ -77,8 +77,8 @@
             } else {
                 mainTitle.style.fontSize = '40px';
             }
-            mainTitle.textContent = name;
         }
+        mainTitle.textContent = name;
     }
 
     function resetData() {
