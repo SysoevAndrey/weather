@@ -1,5 +1,5 @@
 # This project is about weather
-###### 1.1
+###### 1.2
 
 You see the weather in the city you chose.
 
